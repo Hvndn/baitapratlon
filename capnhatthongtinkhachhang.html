@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cập nhật thông tin khách hàng</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .lop {
+            width: 600px;
+            height: 520px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 5px grey;
+            font-size: 17px;
+            position: relative;
+            padding: 10px;
+            background-color: aquamarine;
+        }
+        table {
+            height: 500px;
+        }
+        button {
+            width: 342px;
+            background-color: lightseagreen;
+            border-radius: 5px;
+            color: rgb(83, 12, 12);
+            padding: 3px;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 19px;
+            border: none;
+        }
+        button:hover {
+            box-shadow: 0 0 15px 7px rgba(0, 0, 0, 0.5);
+        }
+        .cuoi {
+            background-color: rgb(191, 191, 15);
+            text-align: center;
+            border-radius: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input {
+            padding: 12px;
+        }
+        input:invalid {
+            color: red;
+        }
+        #dong1{
+            background-color: bisque;
+            border: 2px solid black;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 30px;
+            color: rgb(137, 6, 6);
+        }
+        body {
+            background-image: url('https://png.pngtree.com/background/20210709/original/pngtree-delicious-milk-outdoor-view-high-resolution-images-picture-image_717175.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;  
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lop">
+            <table>
+                <tr>
+                    <td id="dong1" colspan="3"><b><i>CẬP NHẬT THÔNG TIN KHÁCH HÀNG</i></b></td>
+                </tr>
+                <tr>
+                    <td><label for="txtMa" >Mã khách hàng</label></td>
+                    <td><input type="text" name="" size="30" id="txtMa" placeholder="VD: KH001" required></td>
+                </tr>
+                <tr>
+                    <td><label for="txtName">Tên khách hàng:</label></td>
+                    <td><input type="text" name="" size="60" id="txtName" placeholder="VD: Nguyễn Văn Tùng" required></td>
+                </tr>
+                <tr>
+                    <td><label for="">Giới tính</label></td>
+                    <td>
+                        <input type="radio" name="gender" id="rdoMale" checked><label for="rdoMale">Nam</label>
+                        <input type="radio" name="gender"><label>Nữ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="txtDiaChi">Địa chỉ</label></td>
+                    <td><input type="text" name="" size="60" id="txtDiaChi" placeholder="VD: 369 Lê Thanh Nghị - Hải Châu - Đà Nẵng" required></td>
+                </tr>
+                <tr>
+                    <td><label for="txtDienThoai">Điện thoại</label></td>
+                    <td><input type="text" name="phone" size="30" id="txtDienThoai" pattern="[0-9]+" title="Vui lòng chỉ nhập số" placeholder="VD: 0354301301" required></td>
+                </tr>
+                <tr>
+                    <td><label for="txtMail">Email</label></td>
+                    <td><input type="text" name="email" size="60" id="txtMail" pattern="[a-zA-Z0-9._%+-]+@gmail\.com" placeholder="VD: Vantung2k44@gmail.com" required></td>
+                </tr>
+                <tr>
+                    <td class="cuoi" colspan="3">
+                        <b><button type="submit">Cập nhật</button></b>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        document.querySelector('button[type="submit"]').addEventListener('click', function() {
+            var confirmation = confirm('Bạn có chắc muốn cập nhật thông tin?');
+            if (confirmation) {
+                alert('Thông tin đã được cập nhật!');
+            } else {
+                alert('Bạn đã hủy cập nhật!');
+            }
+        });
+    </script> 
+    
+</body>
+</html>
