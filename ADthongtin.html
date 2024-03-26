@@ -10,8 +10,8 @@
       padding: 0;
       box-sizing: border-box;
     }
-      .header {
-      background-image: url(https://img.freepik.com/premium-vector/realistic-white-milk-pouring-down-splash_37895-95.jpg)
+    body {
+      background-image: url("nen.png");
       background-size: cover;
       background-position: center;
       font-family: Arial, sans-serif; /* Thay đổi font chữ nếu cần */
@@ -22,10 +22,10 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #f2f2f2; /* Màu nền cho phần container */
+      background-color: #eee7e7d7; /* Màu nền cho phần container */
     }
     table {
-      background-color: rgb(243, 243, 243);
+      background-color: white;
       width: 100%;
       border-collapse: collapse;
       margin-top: 10px;
@@ -62,7 +62,7 @@
       transition: color 0.3s; /* Hiệu ứng chuyển đổi màu khi hover */
     }
     td:hover {
-      background-color: #f9f9f9;
+      background-color: #f4ecece4;
     }
     td a:hover {
       color: red; /* Màu cho liên kết khi hover */
@@ -125,7 +125,7 @@
         <th>Thao tác</th> <!-- Thêm cột cho nút "Sửa" -->
       </tr>
       <tr>
-        <td><a href="C:\GitHub\doanhtml\baitaplon\chitietsua similac.html">
+        <td><a href="chitietsua similac.html">
           <img src="https://cdn1.concung.com/2022/06/57793-89274-large_mobile/sua-similac-total-protection-1-5-hmo-400g-0-6-thang.jpg" width="50px">
           Similac</a>
         </td>
@@ -138,7 +138,7 @@
         <td><button class="editBtn">Sửa</button></td> <!-- Thêm nút "Sửa" -->
       </tr>
       <tr>
-      <td><a href="https://prod9.similac.com.vn/san-pham/similac-neosure">
+      <td><a href="chitietsua similac neo sure.html">
         <img src="https://suachobeyeu.vn/upload/images/sua-cho-tre-sinh-non-similac-neosure-lon-lon-850g-a2.jpg" width="50px">
         Similac Neo Sure 
       </a>
@@ -151,7 +151,7 @@
       </td> <td><button class="editBtn">Sửa</button></td>
     </tr>
     <tr>
-      <td><a href="chitietsua%20abbot%20pedia%20sure.html">
+      <td><a href="chitietsua abbott grow.html">
         <img src="https://cdn1.concung.com/2020/06/25418-62378-large_mobile/sua-abbott-pediasure-1-10-tuoi-850g.jpg" width="50px">
         Abbott Pedia Sure</a>
       </td>
@@ -175,7 +175,7 @@
        <td><button class="editBtn">Sửa</button></td></td>
     </tr>
     <tr>
-      <td><a href="https://preview2-grow-com-vn.abbottnutrition.com/san-pham/cong-bo-san-pham">
+      <td><a href="chitietsua abbott grow.html">
         <img src="https://www.family.abbott/content/dam/an/familyabbott/vn-vi/grow/products/grow-4/Featured%20Products%202.jpg" width="50px">
         Abbott Grow School</a>
       </td>
@@ -247,6 +247,52 @@ document.addEventListener('DOMContentLoaded', function () {
     addProductForm.reset();
 
     alert('Đã thêm sản phẩm mới: ' + productName);
+  });
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const editBtns = document.querySelectorAll('.editBtn');
+  const editProductFormContainer = document.getElementById('editProductFormContainer');
+  const cancelEditProductBtn = document.getElementById('cancelEditProductBtn');
+
+  // Lắng nghe sự kiện khi người dùng nhấp vào nút "Sửa"
+  editBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const row = btn.parentNode.parentNode; // Lấy dòng của sản phẩm
+      const cells = row.getElementsByTagName('td'); // Lấy tất cả ô trong dòng
+
+      // Lấy thông tin sản phẩm từ các ô
+      const productName = cells[0].innerText.trim();
+      const manufacturer = cells[1].innerText.trim();
+      const type = cells[2].innerText.trim();
+      const weight = cells[3].innerText.trim();
+      const price = cells[4].innerText.trim();
+
+      // Điền thông tin sản phẩm vào biểu mẫu sửa
+      document.getElementById('editProductName').value = productName;
+      document.getElementById('editManufacturer').value = manufacturer;
+      document.getElementById('editType').value = type;
+      document.getElementById('editWeight').value = weight;
+      document.getElementById('editPrice').value = price;
+
+      // Hiển thị biểu mẫu sửa
+      editProductFormContainer.style.display = 'block';
+    });
+  });
+
+  cancelEditProductBtn.addEventListener('click', function () {
+    editProductFormContainer.style.display = 'none';
+  });
+
+  const editProductForm = document.getElementById('editProductForm');
+
+  editProductForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    // Thực hiện các bước cập nhật sản phẩm sau khi người dùng gửi biểu mẫu
+    // Sau khi cập nhật xong, ẩn biểu mẫu sửa đi
+    editProductFormContainer.style.display = 'none';
+    editProductForm.reset();
+
+    alert('Đã cập nhật thông tin sản phẩm.');
   });
 });
 </script>
