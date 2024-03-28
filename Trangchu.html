@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+         * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           }
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #FFDCDC; /* Màu nền */
+            margin-top: 70px; /* Để phù hợp với menu cố định */
+        }
+        .container {
+            position: relative;
+        }
+        .banner{
+            margin-top: 0px;
+        }
+        nav {
+            background-color: #2980b9;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            position: fixed; /* Menu cố định */
+            width: 100%;
+            top: 0;
+            z-index: 999; /* Đảm bảo menu hiển thị trên các phần khác */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        .search-icon img,
+        .user-icon img,
+        .cart-icon img {
+            width: 25px;
+            height: auto;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .search-box {
+                position: absolute;
+                top: 50%; /* Điều chỉnh vị trí theo chiều dọc */
+                left: 72%; /* Đặt ở bên phải của biểu tượng tìm kiếm */
+                transform: translateY(-50%); /* Canh chỉnh để ô tìm kiếm nằm chính giữa theo chiều dọc */
+                display: none;
+            }
+
+            .search-box.active {
+                display: block;
+            }
+        .search-box input[type="text"] {
+            padding: 5px;
+            margin-right: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        section {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 250px;
+        }
+        .product {
+            margin: 10px;
+            flex: 0 1 calc(25% - 20px);
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #fff; /* Màu nền cho sản phẩm */
+        }
+        .product h3 {
+            margin-bottom: 10px;
+        }
+        .product p {
+            margin-bottom: 15px;
+        }
+        .product button {
+            background-color: #2980b9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #1f618d;
+        }
+        .intro {
+            text-align: center;
+            padding: 20px;
+        }
+        footer {
+            background-color: #34495e;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            width: 100%;
+            position: absolute; /* Footer cố định ở dưới cùng */
+            bottom: 0;
+        }
+        .product-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .product-image {
+            width: 120px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+    
+    
+    <nav>
+        <div class="logo">
+            <a href="https://live2.vebo16.net/"><img src="C:\Users\Administrator\Pictures\logo-he-vebo.gif" alt="" width="120px"></a>
+        </div>
+        <ul class="navigation">
+            <li><a href="Trangchu.html">Trang chủ</a></li>
+            <li><a href="thongtinsanpham.html">Sản phẩm</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+        <div class="search-box">
+            <input type="text" placeholder="Nhập từ khóa">
+        </div>
+        <ul class="icon">
+            <li class="search-icon"><img src="C:\GitHub\baitapratlon\search.png" alt="Search"> </li>
+             <li class="cart-icon"><a href="#"><img src="C:\GitHub\baitapratlon\giohang.png" alt="Cart"></a></li>
+            <li class="user-icon"><a href="#"><img src="C:\GitHub\baitapratlon\pp.png" alt="User"> </a></li>
+           
+        </ul>
+
+    </nav>
+    <div class="banner">
+       <a href="https://zbet.me/"><img src="https://media-static.cdnproz1.online/cakhiastatic/zbet-1095x100-1.gif" width="100%" height="auto" alt=""></a>
+    </div>
+    <section>
+        <h2>Sản phẩm nổi bật</h2>
+        <div class="product">
+        <h3>Sữa bột Similac</h3>
+        <div class="product-content">
+            <p>Similac là một trong những dòng sữa dinh dưỡng được nhiều mẹ lựa chọn. Bởi tác dụng tích cực lên cơ thể trẻ nhỏ. Cụ thể là sự phát triển toàn diện về thể chất, lẫn trí não.
+            <a href="chitietsua%20similac.html">Xem thêm... </a></p>
+            <img src="https://cdn1.concung.com/2022/06/57793-89274-large_mobile/sua-similac-total-protection-1-5-hmo-400g-0-6-thang.jpg" alt="" class="product-image">
+        </div>
+        <button>Mua ngay</button>
+        </div>
+
+        <div class="product">
+            <h3>Sữa Bột Abbott Grow</h3>
+        <div class="product-content">
+            <p>Sữa Grow là sản phẩm chứa lượng đạm cao, vốn khiến các mẹ lo lắng dễ gây táo bón cho con, nhưng nhờ công thức giàu lysin và thành phần đạm dễ tiêu hóa nên Grow rất dễ được hấp thụ, hỗ trợ bé tăng cần và phát triển tốt.
+            <a href="chitietsua%20Grow.html">Xem thêm...</a></p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz0s7sq2VCYsW_N8i9mKMU1spGFebUysRQCA&s.jpg" alt="" class="product-image" style="width:130px;">
+        </div>
+            <button>Mua ngay</button>
+        </div>
+        <div class="product">
+            <h3>Sữa bột Similac Neo Sure</h3>
+            <div class="product-content">
+            <p>Sữa bột Similac Neosure là sữa đặc chế cho trẻ sơ sinh nhẹ cân, sinh non hoặc dùng bổ sung một phần bữa ăn cho trẻ trong giai đoạn từ 0 - 12 tháng tuổi. Với nguồn năng lượng, các vitamin và vi dưỡng chất cần thiết
+            <a href="chitietsua%20similac%20neo%20sure.html">Xem thêm... </a></p>
+            <img src="https://suachobeyeu.vn/upload/images/sua-cho-tre-sinh-non-similac-neosure-lon-lon-850g-a2.jpg" style="width: 100px;">
+        </div>
+            <button>Mua ngay</button>
+        </div>
+        <div class="product">
+            <h3>Sữa bột Abbott Pedia Sure</h3>
+            <div class="product-content">
+            <p>Sữa Pediasure Úc của hãng Abbott là nguồn dinh dưỡng bổ sung đặc biệt dành cho trẻ trong độ tuổi từ 1 đến 10 tuổi. Sữa có nguồn dinh dưỡng đầy đủ và được đặc chế một cách cân đối nhằm bổ sung kịp thời sự thiếu hụt dinh dưỡng từ các bữa ăn của trẻ, hỗ trợ trẻ nhanh chóng phát triển đảm bảo hoàn thiện thể chất.
+            <a href="chitietsua%20abbot%20pedia%20sure.html">Xem thêm... </a></p>
+            <img src="C:\Users\Administrator\Pictures\pediasure_850g_5f12b21353a0454fbc71511c1405cb01_grande.png" width="120px">
+        </div>
+            <button>Mua ngay</button>
+        </div>
+        <div class="product">
+            <h3>Sữa Bột Abbott Grow School</h3>
+            <div class="product-content">
+            <p>Sữa bột Grow School G-Power 6+ cung cấp hệ dưỡng chất tiên tiến Growth Power với hơn 30 dưỡng chất thiết yếu đáp ứng nhu cầu dinh dưỡng và tăng trưởng của trẻ trong giai đoạn từ 6 tuổi trở lên.
+            <a href="chitietsua%20abbott%20grow.html">Xem thêm... </a></p>
+            <img src="https://www.family.abbott/content/dam/an/familyabbott/vn-vi/grow/products/grow-4/Featured%20Products%202.jpg" class="product-image">
+        </div>
+            <button>Mua ngay</button>
+        <!-- </div>
+        <div class="product">
+            <h3>Sữa bò tươi</h3>
+            <p>Thông tin chi tiết về sản phẩm...</p>
+            <button>Mua ngay</button>
+        </div> -->
+    </section>
+    <div class="intro">
+        <h2>Giới thiệu cửa hàng sữa</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque, urna eu congue consequat, lorem arcu faucibus turpis, nec consectetur lorem magna a eros. Vivamus eleifend purus quis mauris tristique tempus. Quisque ut lorem vitae sem accumsan ultricies eget at quam. Sed quis purus justo. Vivamus sodales, mauris eget tincidunt finibus, lacus turpis ultrices lectus, a dignissim leo dui nec justo.</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 Cửa hàng sữa. All rights reserved.</p>
+    </footer>
+</div>
+
+<script>
+    const searchIcon = document.querySelector('.search-icon');
+    const searchBox = document.querySelector('.search-box');
+
+    searchIcon.addEventListener('click', function() {
+        searchBox.classList.toggle('active');
+    });
+
+    searchBox.addEventListener('click', function(event) {
+        // Stop propagation to prevent closing when clicking inside search box
+        event.stopPropagation();
+    });
+
+    // Close search box when clicking outside of it
+    document.addEventListener('click', function(event) {
+        if (!searchBox.contains(event.target) && !searchIcon.contains(event.target)) {
+            searchBox.classList.remove('active');
+        }
+    });
+</script>
+</body>
+</html>
