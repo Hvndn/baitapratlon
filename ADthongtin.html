@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng thông tin sản phẩm sữa</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-image: url("nen.png");
+      background-size: cover;
+      background-position: center;
+    }
+    .container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: hwb(0 88% 9% / 0.877);
+    }
+    table {
+      background-color: white;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      border: 1px solid #ddd; /* Đường viền cho bảng */
+      border-radius: 5px; /* Đường cong viền cho bảng */
+      overflow: hidden; /* Loại bỏ viền gợn sóng khi hover */
+      box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      background-color: lightyellow;
+      color: red;
+      text-align: center;
+      padding: 10px; /* Thêm khoảng đệm cho tiêu đề */
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu khi hover */
+      text-align: center;
+    }
+    th {
+      text-align: justify;
+      background-color: lightblue; /* Màu nền cho các thẻ tiêu đề */
+      text-align: center;
+    }
+    td {
+      position: relative;
+    }
+    td a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #333; /* Màu cho các liên kết */
+      transition: color 0.3s; /* Hiệu ứng chuyển đổi màu khi hover */
+    }
+    td:hover {
+      background-color: #f4ecece4;
+    }
+    td a:hover {
+      color: red; /* Màu cho liên kết khi hover */
+    }
+    td img {
+      margin-right: 5px; /* Khoảng cách giữa hình ảnh và văn bản */
+      max-width: 50px; /* Giới hạn chiều rộng của hình ảnh */
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+    }
+    form {
+      width: 400px;
+      margin: 40px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+    }
+    input[type="text"],
+    input[type="email"],
+    button[type="submit"] {
+      width: calc(100% - 24px);
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    
+  </style>
+</head>
+<a href="https://one88.cc/"><img src="Banner.gif" style="width: 100%; height: 200px" alt=""></a>
+<body>
+<div class="container">
+  <div class="form">
+    
+    <table>
+      <h1>Thông tin sản phẩm</h1>
+      <tr>
+        <th>Tên sản phẩm</th>
+        <th>Nhà sản xuất</th>
+        <th>Loại</th>
+        <th>Khối lượng</th>
+        <th>Giá</th>
+        <th>Thao tác</th> <!-- Thêm cột cho nút "Sửa" -->
+        <th>Xóa</th>
+      </tr>
+      <tr>
+        <td><a href="chitietsua similac.html">
+          <img src="https://cdn1.concung.com/2022/06/57793-89274-large_mobile/sua-similac-total-protection-1-5-hmo-400g-0-6-thang.jpg" width="50px">
+          Similac</a>
+        </td>
+        <td>Abbott</td>
+        <td>Sữa bột</td>
+        <td>370 gr</td>
+        <td>145.000 VND
+          <a href="https://www.family.abbott/vn-vi/similac/products/children-older-than-2-years-old/similac-4.html" style="font-size: 10px;"><img style="width: 30px;" src="https://img.pikbest.com/png-images/shopping-cart-icon---vector-template---transparent-background_1794341.png!sw800"> </a>
+        </td>
+        <td><button class="editBtn">Sửa</button></td> <!-- Thêm nút "Sửa" -->
+        <td><input type="checkbox" class="productCheckbox"></td>
+      </tr>
+      <tr>
+      <td><a href="chitietsua similac neo sure.html">
+        <img src="https://suachobeyeu.vn/upload/images/sua-cho-tre-sinh-non-similac-neosure-lon-lon-850g-a2.jpg" width="50px">
+        Similac Neo Sure 
+      </a>
+      </td>
+      <td>Abbott</td>
+      <td>Sữa bột</td>
+      <td>370 gr</td>
+      <td>145.000 VND 
+        <a href="https://www.family.abbott/vn-vi/similac/products/children-older-than-2-years-old/similac-4.html" style="font-size: 10px;"><img style="width: 30px;" src="https://img.pikbest.com/png-images/shopping-cart-icon---vector-template---transparent-background_1794341.png!sw800"> </a>
+      </td> <td><button class="editBtn">Sửa</button></td>
+      <td><input type="checkbox" class="productCheckbox"></td>
+    </tr>
+    <tr>
+      <td><a href="chitietsua abbot pedia sure.html">
+        <img src="https://cdn1.concung.com/2020/06/25418-62378-large_mobile/sua-abbott-pediasure-1-10-tuoi-850g.jpg" width="50px">
+        Abbott Pedia Sure</a>
+      </td>
+      <td>Abbott</td>
+      <td>Sữa bột</td>
+      <td>400 gr</td>
+      <td>146.000 VND
+        <a href="https://www.family.abbott/vn-vi/similac/products/children-older-than-2-years-old/similac-4.html" style="font-size: 10px;"><img style="width: 30px;" src="https://img.pikbest.com/png-images/shopping-cart-icon---vector-template---transparent-background_1794341.png!sw800"> </a>
+      </td> <td><button class="editBtn">Sửa</button></td>
+      <td><input type="checkbox" class="productCheckbox"></td>
+    </tr>
+    <tr>
+      <td><a href="chitietsua abbott grow.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz0s7sq2VCYsW_N8i9mKMU1spGFebUysRQCA&s.jpg" width="50px">
+        GROW</a>
+      </td>
+      <td>Abbott</td>
+      <td>Sữa bột</td>
+      <td>400 gr</td>
+      <td>87.000 VND
+        <a href="https://www.family.abbott/vn-vi/similac/products/children-older-than-2-years-old/similac-4.html" style="font-size: 10px;"><img style="width: 30px;" src="https://img.pikbest.com/png-images/shopping-cart-icon---vector-template---transparent-background_1794341.png!sw800"> </a>
+       <td><button class="editBtn">Sửa</button></td></td>
+       <td><input type="checkbox" class="productCheckbox"></td>
+    </tr>
+    <tr>
+      <td><a href="Grow School.html">
+        <img src="https://www.family.abbott/content/dam/an/familyabbott/vn-vi/grow/products/grow-4/Featured%20Products%202.jpg" width="50px">
+        Abbott Grow School</a>
+      </td>
+      <td>Abbott</td>
+      <td>Sữa bột</td>
+      <td>900 gr</td>
+      <td>225.000 VND
+        <a href="https://www.family.abbott/vn-vi/similac/products/children-older-than-2-years-old/similac-4.html" style="font-size: 10px;"><img style="width: 30px;" src="https://img.pikbest.com/png-images/shopping-cart-icon---vector-template---transparent-background_1794341.png!sw800"> </a>
+    </td> <td><button class="editBtn">Sửa</button></td>
+    <td><input type="checkbox" class="productCheckbox"></td>
+    </tr>
+    </table>
+  <div style="padding: 20px;">
+  <div style="text-align: center;letter-spacing: 10px;text-decoration: underline;">
+      <a href="#"><< </a><a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#"> >></a>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button id="addProductBtn">Thêm Sản phẩm</button>
+      <button id="deleteProductBtn">Xóa Sản phẩm</button>
+    </div>
+  </div>
+</div>
+<div id="addProductFormContainer" style="display: none;">
+  <h2 style="text-align: center; color: red;">Thêm sản phẩm mới</h2>
+  <form id="addProductForm">
+    <label for="productName"><b>Tên sản phẩm:<b></label>
+    <input type="text" id="productName" name="productName" required>
+    
+    <label for="manufacturer">Nhà sản xuất:</label>
+    <input type="text" id="manufacturer" name="manufacturer" required>
+
+    <label for="type">Loại:</label>
+    <input type="text" id="type" name="type" required>
+
+    <label for="weight">Khối lượng:</label>
+    <input type="text" id="weight" name="weight" required>
+
+    <label for="price">Giá:</label>
+    <input type="text" id="price" name="price" required>
+
+    <button type="submit">Thêm</button>
+    <button type="button" id="cancelAddProductBtn" >Hủy</button>
+    
+  </form>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const addProductBtn = document.getElementById('addProductBtn');
+  const addProductFormContainer = document.getElementById('addProductFormContainer');
+  const cancelAddProductBtn = document.getElementById('cancelAddProductBtn');
+
+  addProductBtn.addEventListener('click', function () {
+    addProductFormContainer.style.display = 'block';
+  });
+
+  cancelAddProductBtn.addEventListener('click', function () {
+    addProductFormContainer.style.display = 'none';
+  });
+
+  const addProductForm = document.getElementById('addProductForm');
+
+  addProductForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const productName = document.getElementById('productName').value;
+    const manufacturer = document.getElementById('manufacturer').value;
+    const type = document.getElementById('type').value;
+    const weight = document.getElementById('weight').value;
+    const price = document.getElementById('price').value;
+    const productTable = document.querySelector('table tbody');
+    const newRow = productTable.insertRow();
+
+    const cell1 = newRow.insertCell(0);
+    const cell2 = newRow.insertCell(1);
+    const cell3 = newRow.insertCell(2);
+    const cell4 = newRow.insertCell(3);
+    const cell5 = newRow.insertCell(4);
+    const cell6 = newRow.insertCell(5);
+    const cell7 = newRow.insertCell(6);
+
+    cell1.innerHTML = `<a href="#">${productName}</a>`;
+    cell2.textContent = manufacturer;
+    cell3.textContent = type;
+    cell4.textContent = weight;
+    cell5.textContent = price;
+    cell6.innerHTML = `<button class="editBtn">Sửa</button>`;
+    cell7.innerHTML = `<input type="checkbox" class="productCheckbox">`;
+
+    addProductFormContainer.style.display = 'none';
+    addProductForm.reset();
+
+    alert('Đã thêm sản phẩm mới: ' + productName);
+  });
+});
+</script>
+
+<div id="editProductFormContainer" style="display: none;">
+  <h2 style="text-align: center; color: blue;">Sửa thông tin sản phẩm</h2>
+  <form id="editProductForm">
+    <label for="editProductName"><b>Tên sản phẩm:</b></label>
+    <input type="text" id="editProductName" name="editProductName" required>
+    
+    <label for="editManufacturer">Nhà sản xuất:</label>
+    <input type="text" id="editManufacturer" name="editManufacturer" required>
+
+    <label for="editType">Loại:</label>
+    <input type="text" id="editType" name="editType" required>
+
+    <label for="editWeight">Khối lượng:</label>
+    <input type="text" id="editWeight" name="editWeight" required>
+
+    <label for="editPrice">Giá:</label>
+    <input type="text" id="editPrice" name="editPrice" required>
+
+    <button type="submit">Lưu</button>
+    <button type="button" id="cancelEditProductBtn">Hủy</button>
+  </form>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const editProductBtns = document.querySelectorAll('.editBtn');
+    const editProductFormContainer = document.getElementById('editProductFormContainer');
+    const cancelEditProductBtn = document.getElementById('cancelEditProductBtn');
+
+    editProductBtns.forEach(function(btn) {
+      btn.addEventListener('click', function () {
+        editProductFormContainer.style.display = 'block';
+        const row = btn.closest('tr');
+        const productName = row.querySelector('td:nth-child(1) a').innerText;
+        const manufacturer = row.querySelector('td:nth-child(2)').innerText;
+        const type = row.querySelector('td:nth-child(3)').innerText;
+        const weight = row.querySelector('td:nth-child(4)').innerText;
+        const price = row.querySelector('td:nth-child(5)').innerText.split(' ')[0];
+
+        document.getElementById('editProductName').value = productName;
+        document.getElementById('editManufacturer').value = manufacturer;
+        document.getElementById('editType').value = type;
+        document.getElementById('editWeight').value = weight;
+        document.getElementById('editPrice').value = price;
+
+        // Lưu hàng và chỉ số hàng để cập nhật thông tin sau khi sửa
+        editProductFormContainer.dataset.rowIndex = row.rowIndex;
+      });
+    });
+
+    cancelEditProductBtn.addEventListener('click', function () {
+      editProductFormContainer.style.display = 'none';
+    });
+
+    const editProductForm = document.getElementById('editProductForm');
+
+    editProductForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const rowIndex = editProductFormContainer.dataset.rowIndex;
+      const productName = document.getElementById('editProductName').value;
+      const manufacturer = document.getElementById('editManufacturer').value;
+      const type = document.getElementById('editType').value;
+      const weight = document.getElementById('editWeight').value;
+      const price = document.getElementById('editPrice').value;
+      const productTable = document.querySelector('table tbody');
+      const row = productTable.rows[rowIndex];
+
+      row.cells[0].innerHTML = `<a href="#">${productName}</a>`;
+      row.cells[1].textContent = manufacturer;
+      row.cells[2].textContent = type;
+      row.cells[3].textContent = weight;
+      row.cells[4].textContent = price + ' VND';
+
+      editProductFormContainer.style.display = 'none';
+      editProductForm.reset();
+
+      alert('Đã cập nhật thông tin sản phẩm.');
+    });
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const deleteProductBtn = document.getElementById('deleteProductBtn');
+      
+      // Xử lý sự kiện khi nhấn nút Xóa Sản phẩm
+      deleteProductBtn.addEventListener('click', function () {
+          const productCheckboxes = document.querySelectorAll('.productCheckbox');
+          const checkedProducts = [];
+
+          // Lặp qua tất cả các hộp kiểm
+          productCheckboxes.forEach(function (checkbox) {
+              if (checkbox.checked) {
+                  const row = checkbox.closest('tr');
+                  const productName = row.querySelector('td:nth-child(2)').innerText;
+                  checkedProducts.push(productName); // Thêm tên sản phẩm vào mảng
+                  row.remove(); // Xóa hàng chứa sản phẩm
+              }
+          });
+
+          if (checkedProducts.length > 0) {
+              alert('Đã xóa các sản phẩm: ' + checkedProducts.join(', '));
+          } else {
+              alert('Vui lòng chọn ít nhất một sản phẩm để xóa.');
+          }
+      });
+  });
+</script>
+</div>
+<a href="https://8xbet0.com/sportEvents#/" style=" margin-top: 10px; width: 100%; margin: 130px;" ><img src="https://media-static.cdnproz1.online/cakhiastatic/8xbet-1095x100.gif" alt=""></a>
+
+</body>
+</html>
+
