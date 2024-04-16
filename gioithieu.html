@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+     
+    }
+    .container{
+        text-align: center;
+        font-size: 18px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-image:url(https://wallpaperaccess.com/full/1751370.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+    }
+    p {
+  line-height: 1.6;
+  font-size: 27px;
+  color: rgb(2, 198, 55);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 10px;
+  text-indent: 30px;
+  text-align: justify; /* Căn đều hai bên */
+  margin-left: 50px; /* Lề bên trái */
+  margin-right: 50px; /* Lề bên phải */
+
+
+     
+
+      
+    }
+    :root {
+      --orange: #fa5652;
+      --green: #035755;
+      --gray: #4b4f51;
+      --pink: #fee6e5;
+      --light-pink: #fff9f9;
+      --smooth: all 0.3s ease-in;
+      --shadow: 0 7px 29px 0 rgba(100, 100, 111, 0.2);
+    }
+
+    
+    .banner__tag {
+      font-size: 45px;
+      font-weight: bold;
+      font-family: "Red Hat Display", serif;
+      color: var(--orange);
+      text-transform: uppercase;
+      padding: 10px;
+      border: 2px solid black;
+      border-radius: 15px;
+      display: inline-block;
+      background-image: url(https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-green-nutrition-healthy-milk-poster-image_155616.jpg);
+      margin-top: 40px;
+      
+    }
+    
+    .banner__title {
+      font-size: 27px;
+      font-weight: bold;
+      font-family: "Red Hat Display", serif;
+      color: var(--green);
+      text-transform: uppercase;
+      padding: 5px 0;
+      margin-top: 20px;
+    }
+    
+    .contagion__cards {
+      padding-top: 5%;
+      position: relative;
+      background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230520/pngtree-fresh-milk-splash-on-a-black-surface-image_2653978.jpg);
+    
+    }
+    
+    .contagion__card {
+      position: relative;
+      max-width: 460px;
+      width: 90%;
+      height: 575px;
+      margin: 0 auto 50px auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #fff;
+      padding: 0 15px;
+      transition: all 0.2s linear;
+    }
+    
+    .contagion__card:before {
+      
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 100%;
+      height: 10px;
+      background: transparent;
+      border-end-start-radius: 10px;
+      border-end-end-radius: 10px;
+      transition: var(--smooth);
+    }
+    
+    .contagion__card:hover {
+      background:yellowgreen;
+      transition: var(--smooth);
+      transform: scale(1.1);
+    }
+    .contagion__card img {
+  max-width: 250px; 
+  width: 250px; 
+  height: 220px; 
+}
+
+    
+    
+    .contagion__card h2 {
+      padding-top: 55px;
+      font-size: 2.25rem;
+      font-family: "Domine", serif;
+      color: var(--green);
+      text-transform: capitalize;
+      text-align: center;
+    }
+    
+    .contagion__card p {
+      font-family: "Domine", serif;
+      font-size: 25px;
+      color: var(--gray);
+      text-align: center;
+      text-transform: capitalize;
+      max-width: 380px;
+      margin: 0 auto;
+      padding-top: 13px;
+      color:rgb(201, 12, 18);
+    }
+    
+    @media (min-width: 62rem) {
+      .contagion__cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .contagion__cards:before {
+        
+        position: absolute;
+        bottom: -55%;
+        left: -9%;
+        width: 100%;
+        height: 100%;
+        
+
+      }
+    }
+    
+    .banner {
+  width: 100%;
+  padding: 20px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  text-align: center;
+  animation: slideUp 2s ease-in-out infinite;
+  font-size: 25px;
+  color:rgb(169, 72, 72);
+  background-image:url(https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-baby-milk-powder-promotion-main-map-image_145076.jpg);
+  margin-bottom: 55px;
+  border-radius: 5px;
+ 
+ }
+
+ 
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.banner {
+  animation: wave 2s ease-in-out infinite; 
+}
+
+
+    footer {
+        background-color:rgb(104, 104, 168);
+        padding: 20px;
+        text-align: center;
+        position: fixed; 
+        bottom: 0; 
+        height: 55px;
+        width: 100%;
+        font-size: 30px; 
+        font-family:'Times New Roman', Times, serif;
+        margin-top: 100px;
+        border-radius: 5px;
+        
+    }
+    .trangchu {
+            position: fixed;
+            bottom: 300px; 
+            right: 30px;
+            background-color: rgb(142, 231, 247);
+            padding: 8px;
+            border-radius: 10px;
+        }
+        .trangchu:hover{
+            background-color: rgb(120, 233, 133);
+            box-shadow: 0 0 10px rgb(175, 6, 6);
+           
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+    
+        
+          <h1 class="banner__tag">SHOP BÁN SỮA TƯƠI MILKKEY</h1>
+          <h2 class="banner__title">  
+     Thức uống dinh dưỡng cho mọi gia đình - Sự lựa chọn hoàn hảo từ chúng tôi!
+          </h2>
+          <p class>
+          Luôn đem lại chất lượng, sự an toàn tuyệt đối cho Khách Hàng!
+          </p>
+      
+          <h1 class="banner__tag">GIỚI THIỆU CHUNG </h1>
+          
+          <p><span style="font-size: 50px; color: red;">Chào mừng</span> đến với shop bán sữa của chúng tôi! Chúng tôi cung cấp các sản phẩm sữa chất lượng cao và đa dạng, phục vụ cho mọi nhu cầu dinh dưỡng. Sản phẩm của chúng tôi được chọn lọc kỹ lưỡng từ các thương hiệu uy tín và được kiểm định chất lượng, đảm bảo an toàn cho sức khỏe.
+            Ngoài việc cung cấp sản phẩm sữa, chúng tôi còn cung cấp thông tin và tư vấn chuyên sâu về dinh dưỡng, giúp khách hàng hiểu rõ hơn về lợi ích của việc sử dụng sản phẩm sữa đúng cách.
+            Với phương châm "Sức khỏe là vàng", chúng tôi cam kết đem đến sự hài lòng tuyệt đối cho khách hàng và mong muốn đồng hành cùng mọi người trong việc chăm sóc sức khỏe và phát triển toàn diện.
+            Hãy đến với shop bán sữa của chúng tôi để trải nghiệm sự khác biệt và nhận những dịch vụ tốt nhất!</p>
+            
+        
+            <h4 class="banner__tag">LỊCH SỬ HÌNH THÀNH</h4>
+            
+              <p><span style="font-size: 50px; color: red;">Lịch sử</span>của shop bắt nguồn từ sự xuất hiện của thương mại điện tử. Với sự tiện lợi và đa dạng sản phẩm, các shop này đã trở thành điểm đến phổ biến cho người tiêu dùng. Từ những bước đầu đơn giản, họ đã không ngừng cải tiến và mở rộng, mang lại sự thuận tiện và thông tin bổ ích về dinh dưỡng cho khách hàng. Điều này chứng tỏ vai trò quan trọng của shop bán sữa online trong việc đáp ứng nhu cầu sức khỏe của cộng đồng mạng.
+            </p>
+          </div>
+          
+          <div class="contagion__cards">
+            <!-- card 1 -->
+            <div class="contagion__card">
+              <img src="zyro-image.png" alt="" />
+              <h2>Sữa Tươi FAMI</h2>
+              <p>
+                Thương Hiệu Sữa Tươi Bán Chạy Số 2 Tại Shop Trong Tháng 4 Này !
+              </p>
+            </div>
+            <!-- card 2 -->
+            <div class="contagion__card">
+              <img src="zyro-image (6).png" alt="" />
+              <h2>Sữa Tươi YOSTMOST</h2>
+              <p>Thương Hiệu Sữa Tươi Bán Chạy TOP 1 Tại Shop Với 10.000 Sản Phẩm Mỗi Ngày !
+                
+              </p>
+            </div>
+            <!-- card 3 -->
+            <div class="contagion__card">
+              <img src="zyro-image (1).png" alt="" />
+              <h2>Sữa Tươi VINAMILK</h2>
+              <p>
+                Thương Hiệu Sữa Tươi Bán Chạy Số 3 Tại Shop Trong Tháng 4 Này !
+              </p>
+            </div>
+            </div>
+            <div class="banner">
+            <div>Hãy đăng kí tài khoản để được giảm giá 50% cho sản phẩm đầu tiên của chúng tôi</div>
+            </div>
+            <div class="trangchu">
+              <a href="#">Quay lại trang chủ</a>
+              </div>
+            
+            <footer>
+              Cảm ơn bạn đã ghé thăm shop bán sữa của chúng tôi!
+          </footer>
+          
+          
+  </body>
+</html>
