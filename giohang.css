@@ -1,0 +1,105 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;  
+    font-family:'Times New Roman';
+}
+.wrapper {
+    width: 1140px;
+    margin: 0 auto;
+}
+.transparent-btn {
+    background-color: transparent;
+    border: none; /* Thay đổi từ border: 0 thành border: none */
+    outline: none; /* Loại bỏ viền khi focus */
+    color: rgb(87, 57, 57);
+}
+.transparent-btn:hover {
+    background-color: rgba(114, 54, 54, 0.3); /* Add a hover effect */
+    /* You can adjust the opacity (the last value in rgba) to change the transparency on hover */
+}
+.contact {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    
+}
+.contact img {
+    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto; /* Thêm dòng này để căn giữa ảnh */
+}
+.mucde {
+    border-radius: 30px;
+    text-shadow: 4px 4px 5px cyan;
+    width: 210px;
+    margin: 5px 5px 50px;
+    margin-top: 100px;
+    padding: 5px;
+    transition: .4s;
+}
+.mucde a {
+    color: rgb(87, 57, 57); /* or any other color you prefer */
+}        
+.mucde:hover {
+    transform: scale(1.4); /* Phóng to khung giỏ hàng khi di chuột vào */
+}
+.mucde a:hover {
+text-decoration: none;
+}
+/* Thêm lớp mới để giảm độ rộng của cột số lượng */
+.soluong{
+    width: 120px; /* Độ rộng của cột số lượng */
+}
+.dongia{
+    width: 150px;
+}
+.thaotac{
+    width: 100px; /* Độ rộng của cột thao tác */
+}
+.masua{
+    width: 150px;
+}
+th{
+    text-align: center;
+    font-size: 20px;
+}
+thead{
+    background-color: rgb(168, 168, 116);
+}
+tbody {
+    font-size: 20px;
+    background-color: rgb(242, 242, 141);
+}
+table{
+    border: 4px solid black;
+    border-radius: 13px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Tạo bóng với độ mờ 10px và màu đen */
+}
+/* Nếu muốn viền của các ô trong bảng cũng có góc tròn */
+td, th {
+text-align: center;
+}
+table {
+border-collapse: separate; /* Đảm bảo sự phân tách giữa các ô */
+border-spacing: 0; /* Đặt khoảng cách giữa các ô thành 0 */
+}
+
+td, th {
+border-radius: 0px; /* Đặt bán kính border-radius cho các góc của ô */
+}
+
+thead th:first-child {
+border-top-left-radius: 13px; /* Đặt bán kính border-radius cho góc trên bên trái của ô đầu tiên trong thead */
+}
+
+thead th:last-child {
+border-top-right-radius: 13px; /* Đặt bán kính border-radius cho góc trên bên phải của ô cuối cùng trong thead */
+}
+
+tbody tr:last-child td:first-child {
+border-bottom-left-radius: 13px; /* Đặt bán kính border-radius cho góc dưới bên trái của ô đầu tiên trong tbody */
+}
+
+tbody tr:last-child td:last-child {
+border-bottom-right-radius: 13px; 
+}  

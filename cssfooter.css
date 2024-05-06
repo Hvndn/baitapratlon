@@ -1,0 +1,17 @@
+.intro {
+  text-align: center;
+  padding: 20px;
+}
+footer {
+  background-color: #34495e;
+  color: #fff;
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  width: 100%;
+  position: fixed;
+  height: 40px;
+  /* line-height: 40px; */
+
+  bottom: 0;
+}

@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+   body {
+     background-image: url("nensua.jpg");
+     background-size: cover;
+     background-position: center;
+     font-family: Arial, sans-serif;
+     background-color: rgba(255, 255, 255,0.8);; /* Màu nền */
+     margin-top: 70px; /* Để phù hợp với menu cố định */
+ }
+ .container {
+     position: relative;
+ }
+ .banner{
+     margin-top: 0px;
+ }
+ nav {
+     background-color: rgba(255, 255, 255);
+     color:#ffffff;;
+     padding: 5px;
+     text-align: center;
+     position: fixed; /* Menu cố định */
+     width: 100%;
+     top: 0;
+     z-index: 999; /* Đảm bảo menu hiển thị trên các phần khác */
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ nav ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 20px;
+     
+ }
+ nav ul li {
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    margin: 10px 20px 0px 10px;  
+ }
+ .icon{
+    width: 190px;
+    height: 50px;
+    line-height: 50px;
+    
+ }
+ nav ul li:last-child {
+     margin-right: 0;
+ }
+ nav ul li a {
+     text-decoration: none;
+     color: #c75858;
+     font-weight: bold;
+     font-size: 1.2em;
+     transition:  1s ease;
+     /* width: 50px; */
+     border-radius: 5px;
+    
+
+ }
+ nav ul li:hover {
+     background-color: #e36666;
+     border-radius: 5px;
+ }
+ .search-icon img,
+ .user-icon img,
+ .cart-icon img {
+     width: 25px;
+     height: auto;
+     margin-right: 10px;
+     cursor: pointer;
+ }
+ .search-box {
+         position: absolute;
+         top: 50%; /* Điều chỉnh vị trí theo chiều dọc */
+         left: 72%; /* Đặt ở bên phải của biểu tượng tìm kiếm */
+         transform: translateY(-50%); /* Canh chỉnh để ô tìm kiếm nằm chính giữa theo chiều dọc */
+         display: none;
+     }
+
+     .search-box.active {
+         display: block;
+     }
+ .search-box input[type="text"] {
+     padding: 5px;
+     margin-right: 5px;
+     border: 1px solid #2a1f1f9a;
+     border-radius: 5px;
+ }
+ section {
+     padding: 20px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     margin-bottom: 250px;
+ 
+ }
+ .product {
+     margin: 10px;
+     flex: 0 1 calc(25% - 20px);
+     border: 1px solid #ccc;
+     padding: 20px;
+     border-radius: 20px;
+     background-color:rgba(255, 255, 255,0.6); /* Màu nền cho sản phẩm */
+     transition: transform 0.3s ease;
+     overflow: hidden;
+ }
+ .product:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+ }
+ .product h3 {
+     margin-bottom: 10px;
+ }
+ .product p {
+     margin-bottom: 15px;
+ }
+ .product button {
+     background-color: #2980b9;
+     color: #fff;
+     padding: 10px 20px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+ .product button:hover {
+     background-color: #1e49e3;
+ }
+ .intro {
+     text-align: center;
+     padding: 20px;
+ }
+ footer {
+     background-color: #34495e;
+     color: #fff;
+     text-align: center;
+     padding: 5px;
+     width: 100%;
+     position: absolute; /* Footer cố định ở dưới cùng */
+     bottom: 0;
+ }
+ .product-content {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+ .product-image {
+     width: 120px;
+     height: auto;
+ }
+ /* .conttact{
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     width: 50px;
+ } */
